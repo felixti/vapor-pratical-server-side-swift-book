@@ -1,3 +1,3 @@
 struct BlogPostContext {
-    let post: BlogPost
+    let post: Blog.Post.Detail
 }
