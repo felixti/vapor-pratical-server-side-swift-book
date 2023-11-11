@@ -1,7 +1,7 @@
 import Vapor
 import Fluent
 
-final class BlogPostModel: Model {
+final class BlogPostModel: DatabaseModelInterface {
     typealias Module = BlogModule
     
     static let schema: String = "blog_posts"
@@ -61,5 +61,6 @@ final class BlogPostModel: Model {
         self.excerpt = excerpt
         self.date = date
         self.content = content
+        $category.id = categoryId
     }
 }
